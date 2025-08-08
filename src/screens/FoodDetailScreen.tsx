@@ -21,15 +21,13 @@ const FoodDetailScreen = ({ route}: Props) => {
       quantity: count,
     });
     Alert.alert('Added!', `${count} x ${food.name} added to cart.`);
-    // Optionally: navigation.navigate('Cart');
+
   };
 
   return (
     <><ScrollView style={{ flex: 1, backgroundColor: '#FFF8F3' }}>
       <View style={styles.card}>
         <Image source={{ uri: food.image }} style={styles.foodImage} />
-
-        {/* Quantity Controls */}
         <View style={styles.qtyControls}>
           <TouchableOpacity onPress={() => setCount(Math.max(0,
             count - 1))}>
@@ -46,8 +44,6 @@ const FoodDetailScreen = ({ route}: Props) => {
         </View>
 
 
-
-        {/* Info Row */}
         <View style={styles.statsRow}>
           <Ionicons name="star" size={18} color="#FCB900" />
           <Text style={styles.statsText}>{food.rating || 2.6}</Text>
@@ -57,10 +53,8 @@ const FoodDetailScreen = ({ route}: Props) => {
           <Text style={styles.statsText}>{food.cookTime || '20–30 min'}</Text>
         </View>
 
-        {/* Details */}
         <Text style={styles.details}>{food.instructions || 'No details available.'}</Text>
 
-        {/* Ingredients */}
         <Text style={styles.sectionTitle}>Ingredients</Text>
         <View style={styles.ingredientRow}>
           {(food.ingredients || []).map((ing: string) => (
@@ -84,7 +78,6 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     margin: 24,
     shadowColor: '#FF6F3D',
-    // ...shadow styles
     padding: 18,
     alignItems: 'center'
   },
@@ -94,7 +87,7 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     marginTop: 10,
     marginBottom: 18,
-    // ...shadow
+
   },
   qtyControls: {
     flexDirection: 'row',

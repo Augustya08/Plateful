@@ -85,7 +85,7 @@ const HomeScreen = ({ navigation }: Props) => {
       </View>
           <View style={styles.row}>
             
-            {/* Left Column */}
+
             <View style={[styles.column, styles.offsetColumn]}>
               <Image style={styles.logo} source={require('../img/plateful.png')}/>
               {leftColumn.map((item) => (
@@ -97,7 +97,6 @@ const HomeScreen = ({ navigation }: Props) => {
               ))}
             </View>
 
-            {/* Right Column with ZigZag offset */}
             <View style={[styles.column ]}>
               {rightColumn.map((item) => (
                 <FoodCard

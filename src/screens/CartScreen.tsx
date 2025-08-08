@@ -1,8 +1,7 @@
-// CartScreen.tsx
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView, Alert } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { useCartStore } from '../store/cart'; // update path if needed
+import { useCartStore } from '../store/cart'; 
 
 const DELIVERY_CHARGE = 10;
 

@@ -3,23 +3,22 @@ import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView } from 'rea
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 export default function ProfileScreen() {
-  // Replace with actual user data or use context/auth state later
+
   const user = {
     name: 'Augustya Shukla',
     email: 'augustyashukla394@gmail.com',
-    profilePic: 'https://randomuser.me/api/portraits/women/44.jpg', // placeholder avatar
+    profilePic: 'https://randomuser.me/api/portraits/women/44.jpg', 
   };
 
   return (
     <View style={styles.bg}>
-      {/* Top section: avatar and user info */}
       <View style={styles.header}>
         <Image source={ require('../img/me.jpg')} style={styles.avatar} />
         <Text style={styles.name}>{user.name}</Text>
         <Text style={styles.email}>{user.email}</Text>
       </View>
 
-      {/* Scrollable main content */}
+
       <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
         <TouchableOpacity style={styles.actionCard}>
           <Ionicons name="fast-food-outline" size={26} color="#FF6F3D" style={styles.actionIcon} />
@@ -55,7 +54,7 @@ export default function ProfileScreen() {
 const styles = StyleSheet.create({
   bg: {
     flex: 1,
-    backgroundColor: '#FF6F3D', // your app's orange
+    backgroundColor: '#FF6F3D', 
   },
   header: {
     alignItems: 'center',

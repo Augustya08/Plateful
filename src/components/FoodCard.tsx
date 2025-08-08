@@ -9,8 +9,7 @@ type Props={
 const FoodCard=({food,onPress}:Props)=>{
     return(
         <TouchableOpacity onPress={onPress} style={styles.card}>
-            <Image source={{uri:food.image}} style={styles.image}
- resizeMode='cover'/>
+            <Image source={{uri:food.image}} style={styles.image} resizeMode='cover'/>
             <View style={styles.info}>
         <Text style={styles.name}>{food.name}</Text>
         <Text style={styles.subtext}>🔥{food.caloriesPerServing} kcal</Text>

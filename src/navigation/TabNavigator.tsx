@@ -1,9 +1,9 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import StackNavigator from './stackNavigation'; // your existing stack
-import CartScreen from '../screens/CartScreen'; // create if not existing
-import ProfileScreen from '../screens/ProfileScreen'; // create if not existing
+import StackNavigator from './stackNavigation'; 
+import CartScreen from '../screens/CartScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 
@@ -32,7 +32,6 @@ export default function TabNavigator() {
         tabBarInactiveTintColor: 'gray',
       })}
     >
-      {/* Embed your stack navigator as one tab */}
       <Tab.Screen name="Home" component={StackNavigator} />
       <Tab.Screen name="Cart" component={CartScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />

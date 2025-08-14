@@ -6,10 +6,6 @@ import FoodCard from '../components/FoodCard';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/stackNavigation';
 
-
-
-
-
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
 type Food = {
